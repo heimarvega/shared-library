@@ -1,10 +1,11 @@
+@Library('shared-starter') _
 pipeline {
-    agent any
-    stages {
-        stage('hello') {
-            steps {
-                sh "echo Hello world, Fred. It is Friday."
-            }
-        }
+  agent any
+  stages {
+    stage('hello') {
+      steps {
+        helloWorldSimple("Fred","Friday")
+      }
     }
+  }
 }
